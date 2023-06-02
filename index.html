@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Filipe Storch: Arquitetura e Interiores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Fechar Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>Filipe Storch</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="./#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Topo</a>
+            <a href="./#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Portfólio</a>
+            <a href="./#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Serviços</a>
+            <a href="./#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Quem sou</a>
+            <a href="./#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Filipe Storch</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>Arquitetura e Interiores.</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>Portfólio.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <img src="images/001.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Projeto de um quarto infantil, para um menino de 9 anos. Essa proposta conta com muito espaço para armazenamento, além de um home office super funcional e com uma estética limpa e atemporal.">
+                <img src="images/002.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Novas perspectivas desse quartinho lindo. A intenção foi trazer uma decor atemporal, permitindo que o quarto mantenha-se sempre atualizado.Usamos tons neutros e trouxemos alguns toques lúdicos através dos painéis e papel de parede granilite. Contrapondo esse conceito, usamos uma cabeceira com couro envelhecido.">
+                <img src="images/003.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Mais um ângulo da reforma desse quarto infantil lindo. O que acharam desse painel aramado? Detalhe super legal para quem gosta de expor recordações, desenhos e anotações.">
+                <img src="images/004.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="O home office tem sido bastante praticado ultimamente. E nada melhor que um ambiente belo e funcional para que essa prática seja prazerosa. O partido deste projeto resultou na criação de nichos e armários para armazenamento de livros, junto a iluminação indireta e focal para o espaço de trabalho. Não poderia faltar o painel ripado que eu amo também.">
+                <img src="images/005.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Seguimos a mesma unidade de materiais do restante do apartamento para este ambiente. Pensamos na funcionalidade adicionando espaços para organização e uma bancada generosa de trabalho.">
+            </div>
+
+            <div class="w3-half">
+                <img src="images/006.jpg" style="width:100%" onclick="onClick(this)" alt="Estudo formal.">
+                <img src="images/007.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Residência com estética minimalista, usando materiais básicos da construção civil e cores neutras em sua composição. A madeira traz o calor visual e os arbustos trazem mais leveza à forma da casa.">
+                <img src="images/008.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Home que compõe um espaço de 15 m², misto com as funções de sala de estar e jantar. Destaque especial para o MDF Marquina que imita mármore preto.">
+                <img src="images/009.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Quartinho infantil, feito 100% on-line para Manaus. Trouxemos um ambiente divertido e bem setorizado. Usamos bastante madeira, a cor verde e uma iluminação bem elaborada, resultando nesse espaço lindo.">
+                <img src="images/010.jpg" style="width:100%" onclick="onClick(this)"
+                    alt="Quarto todo em tons terrosos, o que acham? Projeto 100% online para Manaus.">
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="w3-container" id="services" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Serviços.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Com mais de 50 projetos arquitetônicos e de design de interiores autorais
+                realizados de forma 100% online em todo o Brasil, atuo no mercado com
+                uso de técnicas diferenciadas, atreladas a um design centrado no usuário, trazendo recursos
+                catalisadores de pesquisa intensa para uma melhor elaboração do espaço, aumento do faturamento das
+                empresas e também, criando ambientes que garantam uma melhor experiência para o cliente.</p>
+        </div>
+
+        <!-- Designers -->
+        <div class="w3-container" id="designers" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Quem sou.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Filipe Storch, arquiteto e urbanista formado pela Universidade Federal do Pará, adquiri experiência em
+                design de interiores na universidade de artes americana, Savannah College of Art and Design (Georgia) e
+                também, através de estágio no Leyden Lewis Design Studio, localizado no Brooklyn (Estado de Nova Iorque)
+                me aprofundando em técnicas de atuação como arquiteto e designer de interiores, visando buscar um melhor
+                resultado para meus projetos. Especializado em Visual Merchandising, tenho
+                direcionado minha atuação como designer especialista em arquitetura comercial, mantendo também minha
+                paixão
+                por design residencial.
+            </p>
+        </div>
+
+        <!-- The Team -->
+        <div class="w3-row-padding w3-grayscale">
+            <div class="w3-col m4 w3-margin-bottom">
+                <div class="w3-light-grey">
+                    <img src="images/storch.jpg" alt="John" style="width:100%">
+                    <div class="w3-container">
+                        <h3>Filipe Storch</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="w3-container" id="contact" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Contato.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Vamos falar sobre seus projetos? Preencha o formulário e me dê os detalhes.</p>
+            <form action="thanks" method="post">
+                <div class="w3-section">
+                    <label>Nome</label>
+                    <input class="w3-input w3-border" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label>E-mail</label>
+                    <input class="w3-input w3-border" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Menagem</label>
+                    <input class="w3-input w3-border" type="text" name="Message" required>
+                </div>
+                <button type="submit"
+                    class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Enviar</button>
+            </form>
+            <span class="w3-jumbo">
+                <a href="https://www.instagram.com/estudiofilipestorch/" target="_blank"><i
+                        class="fa fa-facebook-official w3-hover-opacity"></i></a>
+                <a href="https://www.facebook.com/estudiofilipestorch" target="_blank"><i
+                        class="fa fa-instagram w3-hover-opacity"></i></a>
+            </span>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <!-- W3.CSS Container -->
+    <div class="w3-black w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+        <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS"
+                target="_blank" class="w3-hover-opacity">w3.css</a></p>
+    </div>
+
+    <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
